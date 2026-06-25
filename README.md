@@ -1,10 +1,10 @@
 # AWS CloudFront Distribution with Amazon S3
 
-![Project Banner](images/cloudfront_banner.png)
+![Project Banner](screenshots/cloudfront_banner.png)
+
+> *This project demonstrates how to deploy a secure content delivery solution using **Amazon CloudFront** and **Amazon S3**.*
 
 ## 📌 Project Overview
-
-This project demonstrates how to deploy a secure content delivery solution using **Amazon CloudFront** and **Amazon S3**.
 
 Instead of making the S3 bucket publicly accessible, Amazon CloudFront is configured to securely retrieve content from the bucket using **Origin Access Control (OAC)**. This approach improves security while allowing users to access website content through CloudFront's global Content Delivery Network (CDN).
 
@@ -61,20 +61,6 @@ During this hands-on project, a private S3 bucket was created, HTML objects were
                   (HTML, CSS, Images, JS)
 ```
 
----
-
-## 📸 Project Screenshots
-
-| Step | Screenshot |
-|------|------------|
-| CloudFront Service | ![](images/cloudfront.png) |
-| S3 Bucket Created | ![](images/s3_bucket.png) |
-| Objects Uploaded | ![](images/objects_upload.png) |
-| Create Distribution | ![](images/create_distribution.png) |
-| Distribution Created | ![](images/distribution.png) |
-| Bucket Policy | ![](images/s3_bucket_policy.png) |
-| Access Denied | ![](images/access_denied.png) |
-
 --- 
 
 ## 🚀 Implementation Steps
@@ -89,7 +75,7 @@ Create a private Amazon S3 bucket that will store the static website files.
 demo-cloudfront-chala-v1
 ```
 
-![](images/s3_bucket.png)
+![S3 Bucket Created](screenshots/s3_bucket.png)
 
 ---
 
@@ -106,7 +92,7 @@ Example files:
 
 Since the bucket is private, attempting to open the HTML file directly from Amazon S3 returns an **Access Denied** error.
 
-![](images/objects_upload.png)
+![Objects Uploaded](screenshots/objects_upload.png)
 
 ---
 
@@ -118,7 +104,7 @@ Because the bucket does **not** allow public access, Amazon S3 blocks the reques
 
 This confirms that the website is protected from direct public access.
 
-![](images/access_denied.png)
+![Access Denied](screenshots/access_denied.png)
 
 ---
 
@@ -135,9 +121,9 @@ Configuration used during this project:
 | Origin | demo-cloudfront-chala-v1 |
 | Security | Default (Origin Access Control) |
 
-![](images/cloudfront.png)
+![CloudFront Service](screenshots/cloudfront.png)
 
-![](images/create_distribution.png)
+![Create Distribution](screenshots/create_distribution.png)
 
 ---
 
@@ -147,7 +133,7 @@ After creating the CloudFront distribution, Amazon automatically generated a buc
 
 This ensures that users cannot bypass CloudFront and access objects directly from Amazon S3.
 
-![](images/s3_bucket_policy.png)
+![Bucket Policy](screenshots/s3_bucket_policy.png)
 
 ---
 
@@ -165,7 +151,7 @@ Example:
 https://xxxxxxxxxxxxx.cloudfront.net/index.html
 ```
 
-![](images/distribution.png)
+![Distribution Created](screenshots/distribution.png)
 
 ---
 
